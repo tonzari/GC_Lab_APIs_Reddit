@@ -1,0 +1,22 @@
+﻿@model WeatherModel
+    <div class="container">
+        <div class="row mb-2">
+            @for (int i = 0; i < Model.properties.periods.Length; i++)
+            {
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm  position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">@Model.properties.periods[i].name</strong>
+                            <h3 class="mb-0"> @Model.properties.periods[i].temperature</h3>
+                            <div class="mb-1 text-muted"> @Model.properties.periods[i].startTime</div>
+                            <p class="card-text mb-auto"> @Model.properties.periods[i].shortForecast</p>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="img-fluid mx-auto my-auto" role="img" src="@Model.properties.periods[i].icon" width="180" height="180"/>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>

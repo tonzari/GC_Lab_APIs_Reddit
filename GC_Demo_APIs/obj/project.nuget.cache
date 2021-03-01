@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nJ2cvIMfk75VO1Csnmj1DSJNiCrnHjwiy/PnzhE7skUribGL6vnclJwdQUUNGd/LXLBmNUpY5w0fHenom5toEA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dude_dude\\source\\repos\\GC_Demo_APIs\\GC_Demo_APIs\\GC_Demo_APIs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dude_dude\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

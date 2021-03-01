@@ -1,0 +1,31 @@
+﻿@model List<GC_Demo_APIs.ViewModels.RedditPostViewModel>
+
+<div class="container">
+    <div class="row mb-2">
+        @foreach (var post in Model)
+        {
+            <div class="col-md-12">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm  position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">@post.subredditName</strong>
+                        <h3 class="mb-0">@post.Title</h3>
+                        <div class="mb-1 text-muted">@post.dateCreated</div>
+                        <p class="card-text mb-auto"> </p>
+                        <a href="@post.url" class="stretched-link">Go to post</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        @if (post.thumbUrl == "default")
+                        {
+                            <svg class="bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="29%" y="50%" fill="#eceeef" dy=".3em">No Picture!</text></svg>
+                        }
+                        else
+                        {
+                            <img class="img-fluid mx-auto my-auto" role="img" src="@post.thumbUrl" width="180" height="180" />
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

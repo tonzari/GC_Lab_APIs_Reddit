@@ -1,0 +1,7 @@
+﻿@model List<GC_Demo_APIs.ViewModels.PersonPlanetViewModel>
+
+@foreach (var item in Model)
+{
+    <p>@item.Person.name is on @item.Planet.name and it's feeling a bit @item.Planet.climate</p>
+}
+
