@@ -52,7 +52,7 @@ namespace GC_Demo_APIs.Controllers
         public IActionResult Reddit()
         {
             RedditModel reddit = new RedditModel();
-            reddit = redditDAL.ConvertDataToRedditModel("Unity3d");
+            reddit = redditDAL.ConvertDataToRedditModel("aww");
 
             List<RedditPostViewModel> redditPosts = new List<RedditPostViewModel>();
 
@@ -70,7 +70,7 @@ namespace GC_Demo_APIs.Controllers
                 redditPosts.Add(singlePost);
             }
 
-            return View(redditPosts);
+            return View(redditPosts.Take(10).ToList());
         }
 
         public IActionResult Privacy()

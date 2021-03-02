@@ -12,6 +12,5 @@ namespace GC_Demo_APIs.ViewModels
         public string url { get; set; }
         public string thumbUrl { get; set; }
         public DateTimeOffset dateCreated { get; set; }
-
     }
 }
